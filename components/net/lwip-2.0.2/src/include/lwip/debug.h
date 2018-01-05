@@ -144,6 +144,7 @@
 #undef LWIP_DEBUG
 #endif
 
+//#ifdef LWIP_DEBUG
 #ifdef LWIP_DEBUG
 #ifndef LWIP_PLATFORM_DIAG
 #error "If you want to use LWIP_DEBUG, LWIP_PLATFORM_DIAG(message) needs to be defined in your arch/cc.h"

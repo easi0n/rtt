@@ -25,9 +25,9 @@
 #include "lwipopts.h"
 
 /* debug option */
-//#define DEBUG
-//#define ETH_RX_DUMP
-//#define ETH_TX_DUMP
+#define DEBUG
+#define ETH_RX_DUMP
+#define ETH_TX_DUMP
 
 #ifdef DEBUG
 #define STM32_ETH_PRINTF          rt_kprintf
@@ -452,7 +452,7 @@ static rt_size_t rt_stm32_eth_write (rt_device_t dev, rt_off_t pos, const void* 
 	return 0;
 }
 
-static rt_err_t rt_stm32_eth_control(rt_device_t dev, rt_uint8_t cmd, void *args)
+static rt_err_t rt_stm32_eth_control(rt_device_t dev, int cmd, void *args)
 {
     STM32_ETH_PRINTF("rt_stm32_eth_control...\n");
 	switch(cmd)
